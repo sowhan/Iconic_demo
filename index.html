@@ -732,7 +732,7 @@ footer {
     </div>
   </div>
   <div class="svc-card">
-    <img class="svc-img" src="ChatGPT Image May 15, 2026, 11_18_13 AM.png" alt="Hair Colour">
+    <img class="svc-img" src="May 15, 2026, 11_21_32 AM.png" alt="Hair Colour">
     <div class="svc-overlay">
       <div class="svc-num">04</div>
       <div class="svc-name">Hair Colour</div>
@@ -793,19 +793,19 @@ footer {
   <p class="reveal d2" style="font-size:14px;color:var(--muted);margin-top:-1rem;margin-bottom:2rem;">Real results from real clients — watch our work in action.</p>
   <div class="video-grid">
     <div class="video-card reveal">
-      <video src="WhatsApp Video 2026-06-11 at 15.42.15.mp4" muted loop playsinline autoplay preload="auto"></video>
+      <video muted loop playsinline preload="metadata"></video>
       <div class="video-label">Hair Treatment</div>
     </div>
     <div class="video-card reveal d1">
-      <video src="WhatsApp Video 2026-06-11 at 15.42.14 (1).mp4" muted loop playsinline autoplay preload="auto"></video>
+      <video muted loop playsinline preload="metadata"></video>
       <div class="video-label">Styling</div>
     </div>
     <div class="video-card reveal d2">
-      <video src="iconic_salon_manglore__2025-12-11T155415.000Z.mp4" muted loop playsinline autoplay preload="auto"></video>
+      <video muted loop playsinline preload="metadata"></video>
       <div class="video-label">Makeover</div>
     </div>
     <div class="video-card reveal d3">
-      <video src="iconic_salon_manglore__2025-02-28T113507.000Z.mp4" muted loop playsinline autoplay preload="auto"></video>
+      <video muted loop playsinline preload="metadata"></video>
       <div class="video-label">Bridal</div>
     </div>
   </div>
@@ -901,6 +901,18 @@ window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 50);
 });
 
+const videoFiles = [
+  'WhatsApp%20Video%202026-06-11%20at%2015.42.15.mp4',
+  'WhatsApp%20Video%202026-06-11%20at%2015.42.14%20%281%29.mp4',
+  'iconic_salon_manglore__2025-12-11T155415.000Z.mp4',
+  'iconic_salon_manglore__2025-02-28T113507.000Z.mp4'
+];
+document.querySelectorAll('.video-card video').forEach((video, i) => {
+  video.src = videoFiles[i];
+  video.load();
+  video.play().catch(() => {});
+});
+
 const revealEls = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -908,6 +920,16 @@ const io = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 revealEls.forEach(el => io.observe(el));
+
+const videoObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    const v = e.target.querySelector('video');
+    if (!v) return;
+    if (e.isIntersecting) { v.play().catch(() => {}); }
+    else { v.pause(); }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.video-card').forEach(c => videoObserver.observe(c));
 
 const slides = document.querySelectorAll('.slides .slide');
 const dots = document.querySelectorAll('.slide-dots .dot');
