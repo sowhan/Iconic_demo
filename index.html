@@ -377,7 +377,7 @@ nav.scrolled {
   background: var(--bg);
   padding: 4px;
 }
-.gal-item { overflow: hidden; position: relative; aspect-ratio: 4/3; }
+.gal-item { overflow: hidden; position: relative; }
 .gal-item img {
   width: 100%; height: 100%; object-fit: cover; display: block;
   filter: brightness(0.72) saturate(0.8);
@@ -589,7 +589,6 @@ footer {
 @media (max-width: 1024px) {
   .services-grid { grid-template-columns: repeat(2,1fr); }
   .gallery-strip { grid-template-columns: 1fr 1fr; }
-  .gal-item { aspect-ratio: 16/9; }
   .testi-grid { grid-template-columns: 1fr; }
   .about-wrap { grid-template-columns: 1fr; }
   .about-img { min-height: 400px; }
@@ -605,7 +604,8 @@ footer {
   .services-head { padding: 4rem 1.5rem 0; }
   .services-grid { grid-template-columns: 1fr; }
   .gallery-strip { grid-template-columns: 1fr 1fr; }
-  .gal-item { aspect-ratio: 3/2; }
+  .gal-item { aspect-ratio: auto; }
+  .gal-item img { height: auto; object-fit: contain; }
   .testimonials { padding: 4rem 1.5rem; }
   .our-work { padding: 4rem 1.5rem; }
   .video-grid { grid-template-columns: repeat(2,1fr); }
@@ -622,7 +622,7 @@ footer {
   .hero-ctas { flex-direction: column; align-items: center; }
   .btn-gold, .btn-ghost { width: 220px; text-align: center; }
   .gallery-strip { grid-template-columns: 1fr; }
-  .gal-item { aspect-ratio: 16/9; }
+  .gal-item img { height: auto; object-fit: contain; }
   .svc-img { height: 280px; }
 }
 </style>
