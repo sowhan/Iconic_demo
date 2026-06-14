@@ -462,6 +462,72 @@ nav.scrolled {
   opacity: 1;
 }
 
+/* ACADEMY */
+.academy {
+  padding: 5rem 4rem;
+  background: var(--bg2);
+  border-top: 1px solid var(--gold-dim);
+  border-bottom: 1px solid var(--gold-dim);
+}
+.academy-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+.academy-copy p {
+  font-size: 14.5px;
+  color: var(--muted);
+  line-height: 1.9;
+}
+.academy-points {
+  list-style: none;
+  margin-top: 1.6rem;
+  display: grid;
+  gap: 0.9rem;
+}
+.academy-points li {
+  font-size: 12.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.academy-points li::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.6;
+}
+.academy-media {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+}
+.academy-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.78);
+  display: block;
+}
+.academy-tag {
+  position: absolute;
+  bottom: 1.4rem;
+  left: 1.4rem;
+  background: rgba(14,13,11,0.85);
+  border: 1px solid var(--gold-dim);
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  padding: 0.55rem 0.9rem;
+}
+
 /* HOURS + CONTACT */
 .info-section {
   display: grid; grid-template-columns: 1fr 1fr;
@@ -593,6 +659,7 @@ footer {
   .about-wrap { grid-template-columns: 1fr; }
   .about-img { min-height: 400px; }
   .about-text { padding: 3.5rem; }
+  .academy-grid { grid-template-columns: 1fr; }
   .video-grid { grid-template-columns: repeat(2,1fr); }
 }
 @media (max-width: 768px) {
@@ -607,6 +674,7 @@ footer {
   .gal-item { aspect-ratio: auto; }
   .gal-item img { height: auto; object-fit: contain; }
   .testimonials { padding: 4rem 1.5rem; }
+  .academy { padding: 4rem 1.5rem; }
   .our-work { padding: 4rem 1.5rem; }
   .video-grid { grid-template-columns: repeat(2,1fr); }
   .info-section { grid-template-columns: 1fr; }
@@ -635,6 +703,7 @@ footer {
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#academy">Academy</a></li>
     <li><a href="#hours">Hours</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="https://www.instagram.com/iconic_salon_manglore" target="_blank" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li>
@@ -749,6 +818,28 @@ footer {
     </div>
   </div>
 </div>
+
+<!-- ACADEMY -->
+<section class="academy" id="academy">
+  <div class="sec-label reveal">Iconic Academy</div>
+  <h2 class="sec-title reveal d1">Professional classes in<br>skin, hair & nail artistry.</h2>
+  <div class="academy-grid">
+    <div class="academy-copy reveal d2">
+      <p>Iconic Academy is designed for aspiring professionals and working beauticians who want real salon-level training. Our classes combine theory, live demos and guided hands-on practice so every student builds confidence from consultation to final finish.</p>
+      <ul class="academy-points">
+        <li>Advanced hair treatments & correction</li>
+        <li>Professional skin treatment protocols</li>
+        <li>Nail treatment, extension & nail art skills</li>
+        <li>Client hygiene, safety and service standards</li>
+      </ul>
+      <a href="tel:+919972716781" class="btn-gold" style="margin-top:2rem;">Enquire About Classes</a>
+    </div>
+    <div class="academy-media reveal d3">
+      <img src="nail-art.webp" alt="Iconic academy nail art and treatment class" loading="lazy">
+      <div class="academy-tag">Hands-on Training</div>
+    </div>
+  </div>
+</section>
 
 <!-- GALLERY STRIP -->
 <div class="gallery-strip">
