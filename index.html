@@ -369,6 +369,44 @@ nav.scrolled {
 .svc-bar { width:0; height:2px; background:var(--gold); margin-top:0.9rem; transition: width 0.4s ease; }
 .svc-card:hover .svc-bar { width: 36px; }
 
+/* ACADEMY */
+.academy-section {
+  background: var(--bg2);
+  border-top: 1px solid var(--gold-dim);
+  border-bottom: 1px solid var(--gold-dim);
+  padding: 5rem 4rem;
+}
+.academy-intro {
+  max-width: 760px;
+  margin-bottom: 2.6rem;
+}
+.academy-intro p {
+  font-size: 14px;
+  color: var(--muted);
+}
+.academy-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2px;
+  background: var(--gold-dim);
+}
+.academy-card {
+  background: var(--bg);
+  padding: 2.1rem;
+}
+.academy-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 0.55rem;
+}
+.academy-card p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
 /* GALLERY STRIP */
 .gallery-strip {
   display: grid;
@@ -594,6 +632,7 @@ footer {
   .about-img { min-height: 400px; }
   .about-text { padding: 3.5rem; }
   .video-grid { grid-template-columns: repeat(2,1fr); }
+  .academy-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
   nav { padding: 1.2rem 1.5rem; }
@@ -608,6 +647,7 @@ footer {
   .gal-item img { height: auto; object-fit: contain; }
   .testimonials { padding: 4rem 1.5rem; }
   .our-work { padding: 4rem 1.5rem; }
+  .academy-section { padding: 4rem 1.5rem; }
   .video-grid { grid-template-columns: repeat(2,1fr); }
   .info-section { grid-template-columns: 1fr; }
   .info-col { padding: 3.5rem 1.5rem; }
@@ -635,6 +675,7 @@ footer {
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#academy">Academy</a></li>
     <li><a href="#hours">Hours</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="https://www.instagram.com/iconic_salon_manglore" target="_blank" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li>
@@ -749,6 +790,29 @@ footer {
     </div>
   </div>
 </div>
+
+<!-- ACADEMY -->
+<section class="academy-section" id="academy">
+  <div class="academy-intro reveal">
+    <div class="sec-label">Iconic Academy</div>
+    <h2 class="sec-title">Professional beauty education,<br>built for future experts.</h2>
+    <p>Our academy offers structured classes in advanced skin, hair, and nail treatments, along with creative beauty art techniques. Every program combines theory, hands-on practice, client consultation methods, and hygiene-first training so students can confidently build salon-ready careers.</p>
+  </div>
+  <div class="academy-grid">
+    <div class="academy-card reveal">
+      <h3>Skin Programs</h3>
+      <p>Learn treatment planning, facial protocols, detan and acne care, and safe product selection for different skin types.</p>
+    </div>
+    <div class="academy-card reveal d1">
+      <h3>Hair Programs</h3>
+      <p>Master professional haircutting, styling, smoothing systems, color fundamentals, and treatment-focused haircare services.</p>
+    </div>
+    <div class="academy-card reveal d2">
+      <h3>Nail & Art Programs</h3>
+      <p>Train in manicure and pedicure routines, extension basics, finishing standards, and modern nail art techniques for clients.</p>
+    </div>
+  </div>
+</section>
 
 <!-- GALLERY STRIP -->
 <div class="gallery-strip">
