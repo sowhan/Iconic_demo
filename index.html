@@ -368,6 +368,8 @@ nav.scrolled {
 .svc-card:hover .svc-desc { max-height: 80px; opacity: 1; }
 .svc-bar { width:0; height:2px; background:var(--gold); margin-top:0.9rem; transition: width 0.4s ease; }
 .svc-card:hover .svc-bar { width: 36px; }
+.svc-card:nth-child(3) .svc-img { object-position: center 15%; }
+.svc-card:nth-child(4) .svc-img { object-position: left center; }
 
 /* ACADEMY */
 .academy-section {
@@ -415,13 +417,14 @@ nav.scrolled {
   background: var(--bg);
   padding: 4px;
 }
-.gal-item { overflow: hidden; position: relative; }
+.gal-item { overflow: hidden; position: relative; align-self: start; }
 .gal-item img {
-  width: 100%; height: 100%; object-fit: cover; display: block;
+  width: 100%; height: auto; object-fit: contain; display: block;
   filter: brightness(0.72) saturate(0.8);
   transition: filter 0.5s, transform 0.6s;
 }
 .gal-item:hover img { filter: brightness(0.95) saturate(1.1); transform: scale(1.06); }
+.gal-item:first-child img { object-position: left center; }
 .gal-lbl {
   position: absolute; bottom: 1rem; left: 1rem;
   font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase;
@@ -642,9 +645,9 @@ footer {
   .stat-item:last-child { border-bottom: none; }
   .services-head { padding: 4rem 1.5rem 0; }
   .services-grid { grid-template-columns: 1fr; }
+  .svc-img { height: 420px; }
   .gallery-strip { grid-template-columns: 1fr 1fr; }
-  .gal-item { aspect-ratio: auto; }
-  .gal-item img { height: auto; object-fit: contain; }
+  .gal-item:first-child { display: none; }
   .testimonials { padding: 4rem 1.5rem; }
   .our-work { padding: 4rem 1.5rem; }
   .academy-section { padding: 4rem 1.5rem; }
@@ -662,7 +665,6 @@ footer {
   .hero-ctas { flex-direction: column; align-items: center; }
   .btn-gold, .btn-ghost { width: 220px; text-align: center; }
   .gallery-strip { grid-template-columns: 1fr; }
-  .gal-item img { height: auto; object-fit: contain; }
   .svc-img { height: 280px; }
 }
 </style>
@@ -791,6 +793,26 @@ footer {
   </div>
 </div>
 
+<!-- GALLERY STRIP -->
+<div class="gallery-strip">
+  <div class="gal-item">
+    <img src="hair-colour.webp" alt="Hair colour" loading="lazy">
+    <span class="gal-lbl">Hair Colour</span>
+  </div>
+  <div class="gal-item">
+    <img src="nail-art.webp" alt="Nail art" loading="lazy">
+    <span class="gal-lbl">Nail Art</span>
+  </div>
+  <div class="gal-item">
+    <img src="styling.webp" alt="Styling" loading="lazy">
+    <span class="gal-lbl">Styling</span>
+  </div>
+  <div class="gal-item">
+    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80&auto=format&fit=crop" alt="Facial" loading="lazy">
+    <span class="gal-lbl">Facial Care</span>
+  </div>
+</div>
+
 <!-- ACADEMY -->
 <section class="academy-section" id="academy">
   <div class="academy-intro reveal">
@@ -813,26 +835,6 @@ footer {
     </div>
   </div>
 </section>
-
-<!-- GALLERY STRIP -->
-<div class="gallery-strip">
-  <div class="gal-item">
-    <img src="hair-colour.webp" alt="Hair colour" loading="lazy">
-    <span class="gal-lbl">Hair Colour</span>
-  </div>
-  <div class="gal-item">
-    <img src="nail-art.webp" alt="Nail art" loading="lazy">
-    <span class="gal-lbl">Nail Art</span>
-  </div>
-  <div class="gal-item">
-    <img src="styling.webp" alt="Styling" loading="lazy">
-    <span class="gal-lbl">Styling</span>
-  </div>
-  <div class="gal-item">
-    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80&auto=format&fit=crop" alt="Facial" loading="lazy">
-    <span class="gal-lbl">Facial Care</span>
-  </div>
-</div>
 
 <!-- TESTIMONIALS -->
 <section class="testimonials">
